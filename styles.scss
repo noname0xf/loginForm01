@@ -1,0 +1,54 @@
+$error: #F44336;
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: sans-serif, arial;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+form.login {
+    background-color: #ececec;
+    padding: 46px 32px;
+    border-radius: 16px;
+    input {
+        display: block;
+        border: 1px solid transparent;
+        outline: none;
+        padding: 18px 22px;
+        font-size: 17px;
+        transition: all .4s;
+        border-radius: 40px;
+        &:not([type="submit"]) {
+            width: 340px;
+            margin-bottom: 6px;
+        }
+        &.error {
+            border-color: $error;
+            background-color: rgba($color: $error, $alpha: .035);
+            color: $error;
+        }
+        &[type="submit"] {
+            background-color: #4977af;
+            color: white;
+            margin: 30px auto 0;
+            padding-left: 32px;
+            padding-right: 32px;
+            cursor: pointer;
+            &:hover {
+                background-color: #1d3b5e;
+            }
+            &.left {
+                transform: translateX(-100px);
+            }
+            &.right {
+                transform: translateX(100px);
+            }
+        }
+    }
+}
